@@ -1,14 +1,7 @@
-const solanaWeb3 = require("@solana/web3.js");
-
-module.exports = async (req, res) => {
-  const connection = new solanaWeb3.Connection(
-    solanaWeb3.clusterApiUrl("devnet")
-  );
-
-  const version = await connection.getVersion();
-
-  res.status(200).json({
-    network: "solana-devnet",
-    version
-  });
-};
+{
+  "name": "solana-vercel-app",
+  "version": "1.0.0",
+  "dependencies": {
+    "@solana/web3.js": "^1.95.3"
+  }
+}
